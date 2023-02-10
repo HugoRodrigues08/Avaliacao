@@ -1,0 +1,110 @@
+﻿body {
+    background-color: #ACC8E5;
+}
+
+.centralizar { /*
+    background: hsla(232, 8%, 63%, 1);
+    background: linear-gradient(90deg, hsla(232, 8%, 63%, 1) 0%, hsla(252, 12%, 46%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(232, 8%, 63%, 1) 0%, hsla(252, 12%, 46%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(232, 8%, 63%, 1) 0%, hsla(252, 12%, 46%, 1) 100%);*/
+    background-color: #EBEBEB;
+    display: inline-block;
+    margin: 20px 10%;
+    width: 80%;
+    padding: 50px 10px 50px 10px;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+}
+
+footer {
+    background: hsla(0, 0%, 77%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+}
+
+.titulo1 {
+    text-align: center;
+    
+}
+.titulo2 {
+    text-align: center;
+    
+}
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: hsla(0, 0%, 77%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 77%, 1) 0%, hsla(249, 6%, 76%, 1) 100%);
+    /* Resolvendo o efeito do float */
+    overflow: hidden;
+}
+    /* Deixando os itens da lista 
+"flutuados" à esquerda (na pratica, 
+lado a lado) */
+    .menu li {
+        float: left; /*  float= flutar */
+    }
+
+    .menu a {
+        color: aliceblue;
+        text-decoration: none;
+        display: block;
+        padding: 14px 16px; /*  primeiro valor (cima e em baixo) segundo valor (esquerda e direita) */
+    }
+
+        .menu a:hover {
+            background: #B8B8B8;
+                color: black
+        }
+
+    /*  Escondendo a opção do item Menu */
+    .menu li.icone {
+        display: none;
+    }
+
+@media screen and (max-width: 760px) {
+    /*  Escondendo os itens do menu */
+    .menu li {
+        display: none;
+    }
+
+        /*  Exebimos novamente o item Menu */
+        .menu li.icone {
+            display: block;
+            float: right;
+        }
+
+    /*  Regra fechada (somente quando o.menu estiver com .aberto, ou seja, somente com as duas classes juntas). */
+    .menu.aberto li {
+        float: none;
+        display: inline;
+    }
+
+    /* Quando o menu está aberto, ele passa a ser a referncia para o posicionamento do botão */
+    .menu.aberto {
+        position: relative;
+    }
+
+
+        /* Posicionando o botão do menu 
+    à direita e acima (em relação ao próprio menu) */
+        .menu.aberto li.icone {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+}
+
+#imagem-escola {
+    background-image: url(../Imagens/materiais.jpeg);
+    height: 500px;
+    background-size: cover
+}
